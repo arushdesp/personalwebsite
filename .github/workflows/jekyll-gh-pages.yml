@@ -35,8 +35,8 @@ jobs:
           source: ./
           destination: ./_site
       - name: Upload GitHub Pages artifact
-        # Updated to use v4 of upload-pages-artifact to resolve deprecation error
-        uses: actions/upload-pages-artifact@v4
+        # Reverted to v3 of upload-pages-artifact as v4 is not found
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
           name: github-pages
